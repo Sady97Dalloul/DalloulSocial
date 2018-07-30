@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1412C82422C4287E0F08B0A5 /* Pods_DalloulSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26169ED8C09634A14356E31 /* Pods_DalloulSocial.framework */; };
 		1838C979210F052500960A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838C978210F052500960A52 /* AppDelegate.swift */; };
-		1838C97B210F052500960A52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838C97A210F052500960A52 /* ViewController.swift */; };
+		1838C97B210F052500960A52 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838C97A210F052500960A52 /* SignInVC.swift */; };
 		1838C97E210F052500960A52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1838C97C210F052500960A52 /* Main.storyboard */; };
 		1838C980210F052500960A52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1838C97F210F052500960A52 /* Assets.xcassets */; };
 		1838C983210F052500960A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1838C981210F052500960A52 /* LaunchScreen.storyboard */; };
+		1838C98B210F073200960A52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1838C98A210F073200960A52 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AEF8BA50F025F26CEFD4BB3 /* Pods-DalloulSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DalloulSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-DalloulSocial/Pods-DalloulSocial.release.xcconfig"; sourceTree = "<group>"; };
 		1838C975210F052500960A52 /* DalloulSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DalloulSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1838C978210F052500960A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1838C97A210F052500960A52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1838C97A210F052500960A52 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		1838C97D210F052500960A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1838C97F210F052500960A52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1838C982210F052500960A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1838C984210F052500960A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1838C98A210F073200960A52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D26169ED8C09634A14356E31 /* Pods_DalloulSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DalloulSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E69E71E81CE72BF52E5CBEFA /* Pods-DalloulSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DalloulSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DalloulSocial/Pods-DalloulSocial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1412C82422C4287E0F08B0A5 /* Pods_DalloulSocial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				1838C977210F052500960A52 /* DalloulSocial */,
 				1838C976210F052500960A52 /* Products */,
+				3269FA7FC06F0E626199B96D /* Pods */,
+				7DA74FB06688A48537E80AE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +64,55 @@
 			isa = PBXGroup;
 			children = (
 				1838C978210F052500960A52 /* AppDelegate.swift */,
-				1838C97A210F052500960A52 /* ViewController.swift */,
+				1838C98C210F0F8800960A52 /* Model */,
+				1838C98D210F0F9900960A52 /* Controller */,
+				1838C98F210F0FBC00960A52 /* View */,
+				1838C97A210F052500960A52 /* SignInVC.swift */,
 				1838C97C210F052500960A52 /* Main.storyboard */,
 				1838C97F210F052500960A52 /* Assets.xcassets */,
 				1838C981210F052500960A52 /* LaunchScreen.storyboard */,
+				1838C98A210F073200960A52 /* GoogleService-Info.plist */,
 				1838C984210F052500960A52 /* Info.plist */,
 			);
 			path = DalloulSocial;
+			sourceTree = "<group>";
+		};
+		1838C98C210F0F8800960A52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1838C98D210F0F9900960A52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1838C98F210F0FBC00960A52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3269FA7FC06F0E626199B96D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E69E71E81CE72BF52E5CBEFA /* Pods-DalloulSocial.debug.xcconfig */,
+				0AEF8BA50F025F26CEFD4BB3 /* Pods-DalloulSocial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DA74FB06688A48537E80AE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D26169ED8C09634A14356E31 /* Pods_DalloulSocial.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1838C987210F052500960A52 /* Build configuration list for PBXNativeTarget "DalloulSocial" */;
 			buildPhases = (
+				D371AB339BC985DEE61E146E /* [CP] Check Pods Manifest.lock */,
 				1838C971210F052500960A52 /* Sources */,
 				1838C972210F052500960A52 /* Frameworks */,
 				1838C973210F052500960A52 /* Resources */,
+				3A10400F8465E2B43DE7BB36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1838C983210F052500960A52 /* LaunchScreen.storyboard in Resources */,
+				1838C98B210F073200960A52 /* GoogleService-Info.plist in Resources */,
 				1838C980210F052500960A52 /* Assets.xcassets in Resources */,
 				1838C97E210F052500960A52 /* Main.storyboard in Resources */,
 			);
@@ -131,12 +185,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A10400F8465E2B43DE7BB36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DalloulSocial/Pods-DalloulSocial-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DalloulSocial/Pods-DalloulSocial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D371AB339BC985DEE61E146E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DalloulSocial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1838C971210F052500960A52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1838C97B210F052500960A52 /* ViewController.swift in Sources */,
+				1838C97B210F052500960A52 /* SignInVC.swift in Sources */,
 				1838C979210F052500960A52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +371,7 @@
 		};
 		1838C988210F052500960A52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69E71E81CE72BF52E5CBEFA /* Pods-DalloulSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +387,7 @@
 		};
 		1838C989210F052500960A52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AEF8BA50F025F26CEFD4BB3 /* Pods-DalloulSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
