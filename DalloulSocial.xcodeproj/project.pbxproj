@@ -18,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0AEF8BA50F025F26CEFD4BB3 /* Pods-DalloulSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DalloulSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-DalloulSocial/Pods-DalloulSocial.release.xcconfig"; sourceTree = "<group>"; };
+		18078D6A211108EA00F224E0 /* DalloulSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DalloulSocial.entitlements; sourceTree = "<group>"; };
 		1838C975210F052500960A52 /* DalloulSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DalloulSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1838C978210F052500960A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1838C97A210F052500960A52 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		1838C977210F052500960A52 /* DalloulSocial */ = {
 			isa = PBXGroup;
 			children = (
+				18078D6A211108EA00F224E0 /* DalloulSocial.entitlements */,
 				1838C978210F052500960A52 /* AppDelegate.swift */,
 				1838C98C210F0F8800960A52 /* Model */,
 				1838C98D210F0F9900960A52 /* Controller */,
@@ -150,6 +152,11 @@
 					1838C974210F052500960A52 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -193,6 +200,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DalloulSocial/Pods-DalloulSocial-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -200,6 +210,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -374,6 +387,7 @@
 			baseConfigurationReference = E69E71E81CE72BF52E5CBEFA /* Pods-DalloulSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DalloulSocial/DalloulSocial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4TJBXV293;
 				INFOPLIST_FILE = DalloulSocial/Info.plist;
@@ -390,6 +404,7 @@
 			baseConfigurationReference = 0AEF8BA50F025F26CEFD4BB3 /* Pods-DalloulSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DalloulSocial/DalloulSocial.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X4TJBXV293;
 				INFOPLIST_FILE = DalloulSocial/Info.plist;
