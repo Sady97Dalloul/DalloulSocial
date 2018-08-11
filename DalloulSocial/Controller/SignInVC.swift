@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -18,7 +19,14 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("JESS: ID found in keychain")
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +56,10 @@ class SignInVC: UIViewController {
                 print("JESS: Unable to authenticate with Firebase - \(String(describing: error))")
             } else {
                 print("JESS: Successfully authenticated with Firebase")
+                if let user = user{
+                    let userData = ["provider": user.user.providerID]
+                    self.completeSignIn(id: user.user.uid, userData: userData)
+                }
             }
         }
     }
@@ -57,17 +69,32 @@ class SignInVC: UIViewController {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil{
                     print("JESS: Successfully authenticated with Firebase")
+                    if let user = user{
+                        let userData = ["provider": user.user.providerID]
+                        self.completeSignIn(id: user.user.uid, userData: userData)
+                    }
                 }else{
                     Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil{
                             print("JESS: Unable to authenticate with Firebase using email")
                         }else{
                             print("JESS: Successfully authenticated with Firebase")
+                            if let user = user{
+                                let userData = ["provider": user.user.providerID]
+                                self.completeSignIn(id: user.user.uid, userData: userData)
+                            }
                         }
                     })
                 }
             })
         }
+    }
+    
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirbaseDBUser(uid: id, userData: userData)
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("JESS: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
     }
     
 }

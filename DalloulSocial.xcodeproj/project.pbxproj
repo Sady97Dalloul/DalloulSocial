@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		1412C82422C4287E0F08B0A5 /* Pods_DalloulSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D26169ED8C09634A14356E31 /* Pods_DalloulSocial.framework */; };
+		180993122111F34500462061 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180993112111F34500462061 /* Constants.swift */; };
 		1838C979210F052500960A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838C978210F052500960A52 /* AppDelegate.swift */; };
 		1838C97B210F052500960A52 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1838C97A210F052500960A52 /* SignInVC.swift */; };
 		1838C97E210F052500960A52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1838C97C210F052500960A52 /* Main.storyboard */; };
 		1838C980210F052500960A52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1838C97F210F052500960A52 /* Assets.xcassets */; };
 		1838C983210F052500960A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1838C981210F052500960A52 /* LaunchScreen.storyboard */; };
 		1838C98B210F073200960A52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1838C98A210F073200960A52 /* GoogleService-Info.plist */; };
+		186768042113058F008D3BC7 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186767FE2113058E008D3BC7 /* RoundBtn.swift */; };
+		186768052113058F008D3BC7 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186767FF2113058E008D3BC7 /* FancyField.swift */; };
+		186768062113058F008D3BC7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186768002113058F008D3BC7 /* CircleView.swift */; };
+		186768072113058F008D3BC7 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186768012113058F008D3BC7 /* FancyView.swift */; };
+		186768082113058F008D3BC7 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186768022113058F008D3BC7 /* FancyBtn.swift */; };
+		186768092113058F008D3BC7 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186768032113058F008D3BC7 /* PostCell.swift */; };
+		1867C025211C3DEC00E15203 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867C024211C3DEC00E15203 /* DataService.swift */; };
+		18EC638E2111FE0400BDD251 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EC638D2111FE0400BDD251 /* FeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AEF8BA50F025F26CEFD4BB3 /* Pods-DalloulSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DalloulSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-DalloulSocial/Pods-DalloulSocial.release.xcconfig"; sourceTree = "<group>"; };
 		18078D6A211108EA00F224E0 /* DalloulSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DalloulSocial.entitlements; sourceTree = "<group>"; };
+		180993112111F34500462061 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1838C975210F052500960A52 /* DalloulSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DalloulSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1838C978210F052500960A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1838C97A210F052500960A52 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -27,6 +37,14 @@
 		1838C982210F052500960A52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1838C984210F052500960A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1838C98A210F073200960A52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		186767FE2113058E008D3BC7 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
+		186767FF2113058E008D3BC7 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		186768002113058F008D3BC7 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		186768012113058F008D3BC7 /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		186768022113058F008D3BC7 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		186768032113058F008D3BC7 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		1867C024211C3DEC00E15203 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		18EC638D2111FE0400BDD251 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		D26169ED8C09634A14356E31 /* Pods_DalloulSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DalloulSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69E71E81CE72BF52E5CBEFA /* Pods-DalloulSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DalloulSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DalloulSocial/Pods-DalloulSocial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,9 +61,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180993102111F32600462061 /* Utill */ = {
+			isa = PBXGroup;
+			children = (
+				180993112111F34500462061 /* Constants.swift */,
+			);
+			path = Utill;
+			sourceTree = "<group>";
+		};
 		1838C96C210F052500960A52 = {
 			isa = PBXGroup;
 			children = (
+				1867C023211C3DD000E15203 /* Services */,
 				1838C977210F052500960A52 /* DalloulSocial */,
 				1838C976210F052500960A52 /* Products */,
 				3269FA7FC06F0E626199B96D /* Pods */,
@@ -66,10 +93,10 @@
 			children = (
 				18078D6A211108EA00F224E0 /* DalloulSocial.entitlements */,
 				1838C978210F052500960A52 /* AppDelegate.swift */,
+				180993102111F32600462061 /* Utill */,
 				1838C98C210F0F8800960A52 /* Model */,
 				1838C98D210F0F9900960A52 /* Controller */,
 				1838C98F210F0FBC00960A52 /* View */,
-				1838C97A210F052500960A52 /* SignInVC.swift */,
 				1838C97C210F052500960A52 /* Main.storyboard */,
 				1838C97F210F052500960A52 /* Assets.xcassets */,
 				1838C981210F052500960A52 /* LaunchScreen.storyboard */,
@@ -89,6 +116,8 @@
 		1838C98D210F0F9900960A52 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1838C97A210F052500960A52 /* SignInVC.swift */,
+				18EC638D2111FE0400BDD251 /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -96,8 +125,22 @@
 		1838C98F210F0FBC00960A52 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				186768002113058F008D3BC7 /* CircleView.swift */,
+				186768022113058F008D3BC7 /* FancyBtn.swift */,
+				186767FF2113058E008D3BC7 /* FancyField.swift */,
+				186768012113058F008D3BC7 /* FancyView.swift */,
+				186768032113058F008D3BC7 /* PostCell.swift */,
+				186767FE2113058E008D3BC7 /* RoundBtn.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		1867C023211C3DD000E15203 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1867C024211C3DEC00E15203 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3269FA7FC06F0E626199B96D /* Pods */ = {
@@ -205,6 +248,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -215,6 +259,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -248,8 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186768052113058F008D3BC7 /* FancyField.swift in Sources */,
+				18EC638E2111FE0400BDD251 /* FeedVC.swift in Sources */,
+				186768042113058F008D3BC7 /* RoundBtn.swift in Sources */,
 				1838C97B210F052500960A52 /* SignInVC.swift in Sources */,
 				1838C979210F052500960A52 /* AppDelegate.swift in Sources */,
+				1867C025211C3DEC00E15203 /* DataService.swift in Sources */,
+				186768062113058F008D3BC7 /* CircleView.swift in Sources */,
+				186768082113058F008D3BC7 /* FancyBtn.swift in Sources */,
+				186768072113058F008D3BC7 /* FancyView.swift in Sources */,
+				180993122111F34500462061 /* Constants.swift in Sources */,
+				186768092113058F008D3BC7 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

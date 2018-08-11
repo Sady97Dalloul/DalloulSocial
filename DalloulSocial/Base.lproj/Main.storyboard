@@ -6,19 +6,21 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
             <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
         </array>
     </customFonts>
     <scenes>
         <!--Sign InVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInVC" customModule="DalloulSocial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goToSignIn" id="BYZ-38-t0r" customClass="SignInVC" customModule="DalloulSocial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,15 +131,234 @@
                     <connections>
                         <outlet property="emailField" destination="Kfe-aW-NVu" id="0am-iL-tsi"/>
                         <outlet property="pwdField" destination="Bu6-TD-1Z6" id="beJ-zj-Z8A"/>
+                        <segue destination="VaA-UD-9Sz" kind="show" identifier="goToFeed" id="Kmq-VX-K0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
+        <!--FeedVC-->
+        <scene sceneID="bOg-Hl-hHd">
+            <objects>
+                <viewController storyboardIdentifier="FeedVC" id="VaA-UD-9Sz" customClass="FeedVC" customModule="DalloulSocial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hFD-8o-OCb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNK-7h-agb" customClass="FancyView" customModule="DalloulSocial" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="5rV-Bj-oRu">
+                                        <rect key="frame" x="8" y="30" width="35" height="30"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="E9j-xr-RO7"/>
+                                            <constraint firstAttribute="width" constant="35" id="uYU-vG-qna"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="h2k-io-vsk" appends="YES" id="Z3i-Z7-7La"/>
+                                        </connections>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f3-ma-woD">
+                                        <rect key="frame" x="159.5" y="29" width="56.5" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.6760556697845459" blue="0.86354440450668335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="5rV-Bj-oRu" firstAttribute="leading" secondItem="nNK-7h-agb" secondAttribute="leading" constant="8" id="B6I-Ct-f07"/>
+                                    <constraint firstItem="0f3-ma-woD" firstAttribute="centerY" secondItem="5rV-Bj-oRu" secondAttribute="centerY" id="E2j-rv-ixZ"/>
+                                    <constraint firstItem="0f3-ma-woD" firstAttribute="centerX" secondItem="nNK-7h-agb" secondAttribute="centerX" id="O7J-ej-r00"/>
+                                    <constraint firstAttribute="height" constant="65" id="VHd-dE-mPF"/>
+                                    <constraint firstItem="5rV-Bj-oRu" firstAttribute="top" secondItem="nNK-7h-agb" secondAttribute="top" constant="30" id="ps0-pc-xVC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eF-bs-4VM" customClass="FancyView" customModule="DalloulSocial" customModuleProvider="target">
+                                <rect key="frame" x="16" y="81" width="343" height="65"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="giI-SY-Jwo">
+                                        <rect key="frame" x="8" y="8" width="327" height="49"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="tip-i8-1wO" customClass="CircleView" customModule="DalloulSocial" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                                <color key="backgroundColor" red="0.0" green="0.6760556697845459" blue="0.86354440450668335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="49" id="5Qp-Q7-HpV"/>
+                                                    <constraint firstAttribute="height" constant="49" id="GnQ-cI-Wbj"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-97-t0E" customClass="FancyField" customModule="DalloulSocial" customModuleProvider="target">
+                                                <rect key="frame" x="59" y="0.0" width="209" height="49"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJv-rU-DZZ" customClass="FancyBtn" customModule="DalloulSocial" customModuleProvider="target">
+                                                <rect key="frame" x="278" y="0.0" width="49" height="49"/>
+                                                <color key="backgroundColor" red="0.90345621109008789" green="0.25742343068122864" blue="0.0012343853013589978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="05B-WI-hDq"/>
+                                                    <constraint firstAttribute="width" constant="49" id="Du7-Zq-plx"/>
+                                                </constraints>
+                                                <state key="normal" image="add-post"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.81176470588235294" green="0.84705882352941175" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="9oL-qw-zYt"/>
+                                    <constraint firstItem="giI-SY-Jwo" firstAttribute="leading" secondItem="1eF-bs-4VM" secondAttribute="leading" constant="8" id="Hr3-bv-MzS"/>
+                                    <constraint firstAttribute="bottom" secondItem="giI-SY-Jwo" secondAttribute="bottom" constant="8" id="I3P-xq-9bj"/>
+                                    <constraint firstAttribute="trailing" secondItem="giI-SY-Jwo" secondAttribute="trailing" constant="8" id="LbJ-w4-d7W"/>
+                                    <constraint firstItem="giI-SY-Jwo" firstAttribute="top" secondItem="1eF-bs-4VM" secondAttribute="top" constant="8" id="aMf-sW-mzl"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FSJ-ki-12I">
+                                <rect key="frame" x="0.0" y="156" width="375" height="511"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="319" id="G0X-t0-QnR" customClass="PostCell" customModule="DalloulSocial" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="319"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G0X-t0-QnR" id="UNo-Qc-CyJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="318.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaW-Th-fQP" customClass="FancyView" customModule="DalloulSocial" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="11" width="345" height="297"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sUo-Vc-AlI">
+                                                            <rect key="frame" x="8" y="8" width="329" height="259"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OEJ-fO-bin">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="60"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="aGo-UO-i6q" customClass="CircleView" customModule="DalloulSocial" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="60" id="Mab-eO-fg4"/>
+                                                                                <constraint firstAttribute="width" constant="60" id="xxf-i8-Afl"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sady Dalloul" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0u-DV-X3l">
+                                                                            <rect key="frame" x="70" y="0.0" width="189" height="60"/>
+                                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="Rxp-iN-62k" customClass="CircleView" customModule="DalloulSocial" customModuleProvider="target">
+                                                                            <rect key="frame" x="269" y="0.0" width="60" height="60"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="60" id="w5P-F7-9pb"/>
+                                                                                <constraint firstAttribute="width" constant="60" id="wIo-WQ-53N"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pDR-9u-wEI">
+                                                                    <rect key="frame" x="0.0" y="70" width="329" height="129"/>
+                                                                </imageView>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nhx-6K-WX4">
+                                                                    <rect key="frame" x="0.0" y="209" width="329" height="50"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zLr-eW-tfP">
+                                                            <rect key="frame" x="253" y="275" width="72" height="22"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCc-1h-UI1">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="33.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.690278389084507" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCI-lJ-ge6">
+                                                                    <rect key="frame" x="38.5" y="0.0" width="33.5" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69027838909999994" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="zLr-eW-tfP" secondAttribute="trailing" constant="20" id="95H-bS-C4r"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sUo-Vc-AlI" secondAttribute="trailing" constant="8" id="Jzd-y8-bLs"/>
+                                                        <constraint firstItem="zLr-eW-tfP" firstAttribute="top" secondItem="sUo-Vc-AlI" secondAttribute="bottom" constant="8" id="PQw-Bi-lP4"/>
+                                                        <constraint firstItem="sUo-Vc-AlI" firstAttribute="top" secondItem="NaW-Th-fQP" secondAttribute="top" constant="8" id="RV6-Xg-w3Z"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zLr-eW-tfP" secondAttribute="bottom" id="cnt-HT-RTC"/>
+                                                        <constraint firstAttribute="bottom" secondItem="sUo-Vc-AlI" secondAttribute="bottom" constant="30" id="eII-4N-Ws8"/>
+                                                        <constraint firstItem="sUo-Vc-AlI" firstAttribute="leading" secondItem="NaW-Th-fQP" secondAttribute="leading" constant="8" id="glc-Jt-wXJ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NaW-Th-fQP" firstAttribute="leading" secondItem="UNo-Qc-CyJ" secondAttribute="leadingMargin" id="6kl-ak-oeE"/>
+                                                <constraint firstItem="NaW-Th-fQP" firstAttribute="top" secondItem="UNo-Qc-CyJ" secondAttribute="topMargin" id="B2p-Zl-vjt"/>
+                                                <constraint firstItem="NaW-Th-fQP" firstAttribute="trailing" secondItem="UNo-Qc-CyJ" secondAttribute="trailingMargin" id="Jcp-h2-UZW"/>
+                                                <constraint firstItem="NaW-Th-fQP" firstAttribute="bottom" secondItem="UNo-Qc-CyJ" secondAttribute="bottomMargin" id="qNQ-z6-6Ax"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.81176470590000005" green="0.84705882349999995" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="caption" destination="Nhx-6K-WX4" id="X3Z-i6-BBE"/>
+                                            <outlet property="likeImg" destination="Rxp-iN-62k" id="jho-Kf-mKM"/>
+                                            <outlet property="likesLbl" destination="gCc-1h-UI1" id="Kqw-7l-cDg"/>
+                                            <outlet property="postImg" destination="pDR-9u-wEI" id="oMf-gI-Lwg"/>
+                                            <outlet property="profileImg" destination="aGo-UO-i6q" id="5Lg-ug-ACG"/>
+                                            <outlet property="usernameLbl" destination="X0u-DV-X3l" id="j3b-Mx-mbk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1eF-bs-4VM" firstAttribute="leading" secondItem="i3Q-WX-OFx" secondAttribute="leading" constant="16" id="DcG-iy-XLd"/>
+                            <constraint firstItem="1eF-bs-4VM" firstAttribute="top" secondItem="nNK-7h-agb" secondAttribute="bottom" constant="16" id="IFl-Y8-U3E"/>
+                            <constraint firstItem="FSJ-ki-12I" firstAttribute="trailing" secondItem="i3Q-WX-OFx" secondAttribute="trailing" id="Ipy-KM-wFQ"/>
+                            <constraint firstItem="nNK-7h-agb" firstAttribute="leading" secondItem="i3Q-WX-OFx" secondAttribute="leading" id="IrW-BZ-1Wr"/>
+                            <constraint firstItem="FSJ-ki-12I" firstAttribute="bottom" secondItem="i3Q-WX-OFx" secondAttribute="bottom" id="JZ9-dQ-SFX"/>
+                            <constraint firstItem="i3Q-WX-OFx" firstAttribute="trailing" secondItem="1eF-bs-4VM" secondAttribute="trailing" constant="16" id="TY4-5v-mmI"/>
+                            <constraint firstItem="FSJ-ki-12I" firstAttribute="leading" secondItem="i3Q-WX-OFx" secondAttribute="leading" id="bPD-yh-QgN"/>
+                            <constraint firstItem="FSJ-ki-12I" firstAttribute="top" secondItem="1eF-bs-4VM" secondAttribute="bottom" constant="10" id="eHd-EI-oQh"/>
+                            <constraint firstItem="nNK-7h-agb" firstAttribute="trailing" secondItem="i3Q-WX-OFx" secondAttribute="trailing" id="uYT-99-vtk"/>
+                            <constraint firstItem="nNK-7h-agb" firstAttribute="top" secondItem="hFD-8o-OCb" secondAttribute="top" id="yEr-fT-GUi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i3Q-WX-OFx"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="FSJ-ki-12I" id="aL6-IL-enC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8N7-cC-HLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="h2k-io-vsk">
+                    <connections>
+                        <action selector="signOutTapped:" destination="VaA-UD-9Sz" id="2r4-uX-Gkx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="896.79999999999995" y="116.49175412293854"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="add-image" width="88" height="88"/>
+        <image name="add-post" width="88" height="88"/>
         <image name="devslopes-logo" width="150" height="94"/>
+        <image name="empty-heart" width="70" height="70"/>
         <image name="f" width="352" height="328"/>
+        <image name="placeholder" width="567" height="312"/>
+        <image name="profile" width="113" height="155"/>
+        <image name="sign-out" width="92" height="65"/>
     </resources>
 </document>
